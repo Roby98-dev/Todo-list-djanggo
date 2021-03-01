@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo List | Djanggo</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<style type="text/css">
+		.body {
+			font-family: 'Open-Sans', sans-serif;
+			line-height: 1.6;
+		}
+
+		.add-todo-list {
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container m-5 p-2 rounded mx-auto bg-light shadow">
+		<div class="row">
+			<div class="col">
+				<div class="h1 text-primary m-1 p-4 text-center display-inline-block">
+					<i class="fa fa-check bg-primary text-white p-2"></i>
+					<u>MY TODO-s</u>
+				</div>
+				<form method="POST">
+					<div class="row m-1 p-3">
+						<div class="col col-11 mx-auto">
+							<div class="row bg-white justify-content-center">
+								<div class="col">
+									<input type="text" name="task_name" maxlength="200" class="form-control form-control-lg border-0 add-todo-input bg-transparant" placeholder="Add new Todo List...">
+								</div>
+								<div class="col-auto m-0 px-2 d-flex align-items-center">
+									<input type="date" name="due_date" title="Set a due date">
+								</div>
+								<div class="col-auto px-0 mx-0 mr-2">
+									<input type="submit" value="add" class="btn btn-primary" name="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="p-2 mx-4 border-black-25 border-bottom"></div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Task</th>
+							<th scope="col">
+								<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Priority</button>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#">ALL</a>
+										<a class="dropdown-item" href="#">LOW</a>
+										<a class="dropdown-item" href="#">MEDIUM</a>
+										<a class="dropdown-item" href="#">HIGHT</a>
+									</li>
+								</ul>
+							</th>
+							<th scope="col">DUE DATE</th>
+							<th scope="col">
+								<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Priority</button>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#">ALL</a>
+										<a class="dropdown-item" href="#">PENDING</a>
+										<a class="dropdown-item" href="#">COMPLETED</a>
+									</li>
+								</ul>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">1</td>
+							<td scope="row">Watch Netflix</td>
+							<td scope="row">Hight</td>
+							<td scope="row">1 March 2021</td>
+							<td scope="row"><a href="#">Mark as complete</a></td>
+							<td><a href="#"><i class="fa fa-edit text-primary"></i></a></td>
+							<td><a href="#"><i class="fa fa-trash text-danger"></i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
